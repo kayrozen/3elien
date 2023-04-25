@@ -58,6 +58,7 @@ def detect(opt, stframe, car, bus, truck, motor, line, fps_rate, class_id):
     sum_fps = 0
     line_pos = line
     save_vid = True
+    save_txt = True
     # initialize deepsort
     cfg = get_config()
     cfg.merge_from_file(opt.config_deepsort)
@@ -224,10 +225,10 @@ def detect(opt, stframe, car, bus, truck, motor, line, fps_rate, class_id):
                 org = (20, 70)
                 distance_height = 100
                 font = cv2.FONT_HERSHEY_SIMPLEX
-                fontScale = 2
-                # cv2.putText(im0, 'car: ' + str(len(data_car)), org, font, fontScale, color_car, thickness, cv2.LINE_AA)
+                fontScale = 1
+                cv2.putText(im0, 'car: ' + str(len(data_car)), org, font, fontScale, color_car, thickness, cv2.LINE_AA)
                 # cv2.putText(im0, 'bus: ' + str(len(data_bus)), (org[0], org[1] + distance_height), font, fontScale, color_bus, thickness, cv2.LINE_AA)
-                # cv2.putText(im0, 'truck: ' + str(len(data_truck)), (org[0], org[1] + distance_height*2), font, fontScale, color_truck, thickness, cv2.LINE_AA)
+                cv2.putText(im0, 'truck: ' + str(len(data_truck)), (org[0], org[1] + distance_height*2), font, fontScale, color_truck, thickness, cv2.LINE_AA)
                 # cv2.putText(im0, 'motor: ' + str(len(data_motor)), (org[0], org[1] + distance_height*3), font, fontScale, color_motor, thickness, cv2.LINE_AA)
 
                 cv2.imshow(str(p), im0)
@@ -311,7 +312,7 @@ def parse_opt():
     parser.add_argument('--conf-thres', type=float, default=0.5, help='object confidence threshold')
     parser.add_argument('--iou-thres', type=float, default=0.5, help='IOU threshold for NMS')
     parser.add_argument('--fourcc', type=str, default='mp4v', help='output video codec (verify ffmpeg support)')
-    parser.add_argument('--device', default='', help='cuda device, i.e. 0 or 0,1,2,3 or cpu')
+    parser.add_argument('--device', default='0', help='cuda device, i.e. 0 or 0,1,2,3 or cpu')
     parser.add_argument('--show-vid', action='store_false', help='display tracking video results')
     parser.add_argument('--save-vid', action='store_true', help='save video tracking results')
     parser.add_argument('--save-txt', action='store_true', help='save MOT compliant results to *.txt')

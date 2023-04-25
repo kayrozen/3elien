@@ -1,3 +1,22 @@
+# Détection et dénombrement de véhicules ciculant sur un pont (mettons là).
+
+![Demo image](Resources/demo3l.png)
+
+## Introduire 
+Ce projet vise à compter le nombre de véhicule traversant un certain pont de Québec. On va en avoir le coeur net. 
+
+**NOTE** : Ceci n'a aucune valeur scientifique (J'pense) 
+
+## TODO
+* Tokébakiser (fr-qc)
+* Agent pour téléchargement caméra quebec511
+* Stats
+* ...
+* Profit !
+
+---
+
+
 # Vehicle Detection and Counting System on Streamlit
 
 ![Demo image](Resources/demo.jpg)
