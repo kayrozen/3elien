@@ -8,11 +8,13 @@ Ce projet vise à compter le nombre de véhicule traversant un certain pont de Q
 **NOTE** : Ceci n'a aucune valeur scientifique (J'pense) 
 
 ## TODO
-* Tokébakiser (fr-qc)
-* Agent pour téléchargement caméra quebec511
-* Stats
-* ...
-* Profit !
+* [x] Tokébakiser (fr-qc)
+* [ ] Agent pour téléchargement caméra quebec511
+* [ ] Stats 
+  * [ ] Dataframe Pandas pour manipulation
+  * [ ] SQLite DB pour la persistence
+* [ ] ...
+* [ ] Profit !
 
 ---
 
